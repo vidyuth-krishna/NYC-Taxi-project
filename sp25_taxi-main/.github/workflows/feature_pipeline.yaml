@@ -2,7 +2,7 @@ name: taxi_rides_hourly_features_pipeline
 
 on:
   schedule:
-    - cron: '2 * * * *' # Runs every hour
+    - cron: '1 * * * *' # Runs every hour
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -21,9 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements_feature_pipeline.txt # Install dependencies if a requirements file exists
+          pip install -r sp25_taxi-main/requirements_feature_pipeline.txt
 
       - name: Run new data fetch pipeline and load to hopsworks
         env:
-          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY}}
-        run: python -m src.feature_pipeline
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+        run: python -m sp25_taxi-main.src.feature_pipeline
+
