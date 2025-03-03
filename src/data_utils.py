@@ -13,9 +13,9 @@ from typing import List, Optional, Tuple, Union
 import numpy as np
 import pandas as pd
 import pytz
-import requests
+import requests 
 
-from config import RAW_DATA_DIR
+from src.config import RAW_DATA_DIR
 
 
 def fetch_raw_trip_data(year: int, month: int) -> Path:
