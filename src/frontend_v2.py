@@ -17,14 +17,14 @@ import requests
 import streamlit as st
 from streamlit_folium import st_folium
 
-from src.config import DATA_DIR
-from src.inference2 import (
+from config import DATA_DIR
+from inference2 import (
     get_model_predictions,
     load_batch_of_features_from_store,
     load_metrics_from_registry,
     load_model_from_registry,
 )
-from src.plot_utils import plot_aggregated_time_series
+from plot_utils import plot_aggregated_time_series
 
 # Initialize session state for the map
 if "map_created" not in st.session_state:
