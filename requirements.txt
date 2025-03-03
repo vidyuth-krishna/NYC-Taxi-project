@@ -19,3 +19,4 @@ streamlit
 streamlit-folium
 xgboost 
 setuptools>=65.5.1
+pip>=23.0
