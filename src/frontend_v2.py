@@ -240,7 +240,7 @@ with st.spinner(text="Fetching batch of inference data"):
     progress_bar.progress(2 / N_STEPS)
 
 
-with st.spinner(text="Load model from registry"):
+with st.spinner(text="Load model from registry"):   
     model = load_model_from_registry(version=None)
     st.sidebar.write("Model was loaded from the registry")
     progress_bar.progress(3 / N_STEPS)
